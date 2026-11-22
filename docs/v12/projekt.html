@@ -3,54 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Projekt | Uppsala Crew IF</title>
-<meta name="description" content="Projekt – Uppsala Crew IF.">
+<title>Aktiviteter – Uppsala Crew IF</title>
+<meta name="description" content="Träning och tävlingar med Uppsala Crew IF: Miniramp Madness, Uppsala Rail Jam, skateskola och coachning i funparken.">
 <meta name="theme-color" content="#0c2b4b"><meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Projekt | Uppsala Crew IF"><meta property="og:description" content="Projekt – Uppsala Crew IF."><meta property="og:image" content="img/freeski-hopp.jpg">
+<meta property="og:title" content="Aktiviteter – Uppsala Crew IF"><meta property="og:description" content="Träning och tävlingar med Uppsala Crew IF: Miniramp Madness, Uppsala Rail Jam, skateskola och coachning i funparken."><meta property="og:image" content="img/freeski-hopp.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/tokens.css?v=bcf1fad1">
 <link rel="stylesheet" href="assets/bas.css?v=f351c1c4">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
+/* Logga */
 .logga{display:inline-flex;align-items:center;gap:12px}
 .logga .logo-bild{width:52px;height:52px;flex:none;border-radius:50%}
 @media(max-width:700px){.logga .logo-bild{width:42px;height:42px}}
+@media(max-width:479px){.logga .ord,.logga .tag{display:none!important}}
 .fot-namn{display:flex;align-items:center;gap:14px}
 .fot-namn img{width:64px;height:64px;border-radius:50%;background:#fff}
-.hero-band .slide-text{top:auto!important;bottom:clamp(56px,9vh,110px)!important;left:clamp(24px,5vw,80px)!important;right:auto!important;max-width:min(860px,calc(100% - 48px))!important}
-.hero-band .slide-text{display:block!important;text-align:left!important;padding:0!important;width:min(860px,calc(100% - 48px))!important;left:max(clamp(24px,5vw,80px),calc((100% - 1240px) / 2))!important}
-.hero-band .slide-text h1,.hero-band .slide-text .hero-ingress{max-width:none!important;width:auto!important}
+/* Bli medlem-knappen syns i sidhuvudet på alla bredder */
+.head-kontakt{display:inline-flex!important}
+@media(max-width:599px){.head-kontakt{min-height:40px!important;padding:8px 16px!important;font-size:13.5px!important}}
+/* Toppbild: bilderna ligger ovanpå varandra, texten ligger fast */
 .hero-band .band-bild{min-height:max(620px,78svh)!important}
-@media(min-width:701px){.hero-band .slide-text h1{font-size:clamp(36px,min(4.4vw,8.5vh),68px)!important}}
-.hero-band .slide-text>*{margin-left:0!important;margin-right:0!important}
-@media(max-width:700px){.hero-band .band-bild{min-height:max(720px,100svh)!important}.hero-band .slide-text h1 br{display:none}.hero-band .slide-text .hero-knappar .knapp{padding-inline:20px}}
-.hero-band .slide-text .hero-knappar .knapp{width:auto!important;flex:0 0 auto!important;padding-inline:28px}
-@media(min-width:701px){.hero-band .slide-text h1{font-size:clamp(40px,4.4vw,68px)!important;max-width:none!important;line-height:1.02!important}}
-.hero-band .slide-text h1,.hero-band .slide-text h2{font-size:clamp(34px,4.2vw,64px)!important;line-height:1.04}
-.hero-band .slide-text .hero-ingress{color:rgba(255,255,255,.88);font-size:clamp(16px,1.25vw,19px);line-height:1.55;margin:22px 0 0!important;max-width:52ch}
-.hero-band .slide-text .hero-knappar{display:flex!important;flex-wrap:wrap;gap:12px;margin-top:26px;justify-content:flex-start!important;width:100%}
-.hero-band .slide-text .hero-knappar .knapp-ljus{background:#fff;color:#0c2b4b}
+.hero-band .bild-slide{position:absolute!important;inset:0!important;height:100%!important}
 .hero-band .bild-slide .bild-fyll::after{background:linear-gradient(0deg,rgba(6,18,32,.78),rgba(6,18,32,.15) 55%,rgba(6,18,32,.05))!important}
-.hero-band .spel-kontroll{top:auto!important;bottom:clamp(56px,9vh,110px)!important}
-@media(max-width:700px){.hero-band .spel-kontroll{top:96px!important;bottom:auto!important;right:24px!important}.hero-band .slide-text{bottom:140px!important}}
+.hero-band .slide-text{position:absolute!important;z-index:3!important;display:block!important;text-align:left!important;padding:0!important;top:auto!important;right:auto!important;
+  bottom:clamp(56px,9vh,110px)!important;left:max(clamp(24px,5vw,80px),calc((100% - 1240px) / 2))!important;width:min(860px,calc(100% - 48px))!important;max-width:none!important}
+.hero-band .slide-text>*{margin-left:0!important;margin-right:0!important}
+.hero-band .slide-text h1{color:#fff;max-width:none!important;width:auto!important;font-size:clamp(36px,min(4.4vw,8.5vh),68px)!important;line-height:1.02!important}
+.hero-band .slide-text .hero-ingress{color:rgba(255,255,255,.9);font-size:clamp(16px,1.25vw,19px);line-height:1.55;margin:22px 0 0!important;max-width:52ch!important}
+.hero-band .slide-text .hero-knappar{display:flex!important;flex-wrap:wrap;gap:12px;margin-top:26px!important;justify-content:flex-start!important}
+.hero-band .slide-text .hero-knappar .knapp{width:auto!important;flex:0 0 auto!important;padding-inline:28px}
+.hero-band .slide-text .hero-knappar .knapp-ljus{background:#fff;color:#0c2b4b}
+.hero-band .spel-kontroll{z-index:4!important;top:auto!important;bottom:clamp(56px,9vh,110px)!important}
+@media(max-width:700px){
+  .hero-band .band-bild{min-height:max(720px,100svh)!important}
+  .hero-band .slide-text{bottom:140px!important}
+  .hero-band .slide-text h1{font-size:clamp(32px,9vw,44px)!important}
+  .hero-band .slide-text h1 br{display:none}
+  .hero-band .slide-text .hero-knappar .knapp{padding-inline:20px}
+  .hero-band .spel-kontroll{top:96px!important;bottom:auto!important;right:24px!important}
+}
+/* Formulär och sektioner för medlemskap och kontakt */
+.uc-split{display:grid;gap:clamp(32px,4vw,72px);align-items:start}
+@media(min-width:960px){.uc-split{grid-template-columns:1fr 1fr}}
+.uc-text h2{font-size:calc(clamp(30px,3.4vw,48px) * var(--skala-r))}
+.uc-ingress{font-size:clamp(17px,1.3vw,19px);line-height:1.55;margin:16px 0 0;max-width:34em;opacity:.9}
+.uc-pris{font:var(--w-siffra) clamp(48px,5.4vw,76px)/1 var(--font-r);letter-spacing:-.03em;margin:22px 0 0}
+.uc-pris small{font-size:.3em;font-weight:500;letter-spacing:0;margin-left:10px;opacity:.8}
+.uc-lista{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px;max-width:34em}
+.uc-lista li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;line-height:1.5}
+.uc-lista svg{width:22px;height:22px;color:var(--c-a);margin-top:1px}
+.uc-h3{font:var(--w-r) 24px/1.2 var(--font-r);letter-spacing:var(--tr-r);margin:44px 0 0}
+.uc-steg{list-style:none;padding:0;margin:20px 0 0;counter-reset:s;display:grid;gap:14px}
+.uc-steg li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center}
+.uc-steg li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--c-p);color:#fff;display:grid;place-items:center;font-weight:700}
+.uc-faq{margin-top:12px;border-top:1px solid var(--c-line)}
+.uc-faq details{border-bottom:1px solid var(--c-line)}
+.uc-faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:16px 0;font-weight:600;min-height:44px;align-items:center}
+.uc-faq summary::-webkit-details-marker{display:none}
+.uc-faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--c-ton);display:grid;place-items:center;font-size:18px}
+.uc-faq details[open] summary::after{content:"–"}
+.uc-faq details p{margin:0 0 16px;color:var(--c-mut);max-width:40em}
+.uc-info{display:grid;gap:18px;margin:32px 0 0}
+@media(min-width:560px){.uc-info{grid-template-columns:1fr 1fr}}
+.uc-info dt{font:600 12.5px/1.3 var(--font-t);letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.uc-info dd{margin:0;font-size:17px;font-weight:600}
+.uc-info a{color:inherit}
+.uc-form{background:var(--c-bg);color:var(--c-ink);border:1px solid var(--c-line);border-radius:18px;padding:clamp(22px,3vw,40px);box-shadow:0 24px 60px rgba(8,28,49,.14)}
+.uc-form h3{font:var(--w-r) clamp(24px,2vw,28px)/1.15 var(--font-r);letter-spacing:var(--tr-r);color:var(--c-rubrik);margin:0}
+.uc-form-intro{margin:8px 0 0;color:var(--c-mut)}
+.uc-rad{display:grid;gap:0 16px}
+@media(min-width:560px){.uc-rad{grid-template-columns:1fr 1fr}}
+.uc-falt{margin-top:18px}
+.uc-falt label{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:14.5px;margin-bottom:7px}
+.uc-valfri{font-weight:500;color:var(--c-mut)}
+.uc-falt input,.uc-falt select,.uc-falt textarea{width:100%;min-height:52px;padding:13px 15px;font:inherit;font-size:16px;color:var(--c-ink);background:#fff;border:1.5px solid var(--c-ton2);border-radius:12px;transition:border-color .15s}
+.uc-falt textarea{min-height:150px;resize:vertical}
+.uc-falt input:hover,.uc-falt select:hover,.uc-falt textarea:hover{border-color:#9aa6b2}
+.uc-falt input:focus,.uc-falt select:focus,.uc-falt textarea:focus{outline:3px solid #2f7bdc;outline-offset:1px;border-color:var(--c-p)}
+.uc-belopp{border:0;padding:0;margin:18px 0 0;min-width:0}
+.uc-belopp legend{font-weight:600;font-size:14.5px;margin-bottom:8px;padding:0}
+.uc-belopp div{display:flex;gap:10px}
+.uc-belopp label{flex:1;position:relative}
+.uc-belopp input{position:absolute;opacity:0;width:1px;height:1px}
+.uc-belopp span{display:flex;align-items:center;justify-content:center;min-height:50px;border:1.5px solid var(--c-ton2);border-radius:999px;font-weight:700;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.uc-belopp span:hover{border-color:var(--c-p)}
+.uc-belopp input:checked+span{background:var(--c-p);border-color:var(--c-p);color:#fff}
+.uc-belopp input:focus-visible+span{outline:3px solid #2f7bdc;outline-offset:2px}
+.uc-hint{margin:8px 0 0;font-size:13.5px;color:var(--c-mut)}
+.uc-check{display:grid;grid-template-columns:22px 1fr;gap:10px;margin-top:20px;font-size:14px;line-height:1.5;color:var(--c-mut);cursor:pointer}
+.uc-check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--c-p)}
+.uc-check a{color:var(--c-p-text)}
+.uc-form .knapp{width:100%;margin-top:22px;min-height:54px;font-size:16px}
+.uc-status{margin:14px 0 0;font-weight:600;color:var(--c-p-text)}
+.uc-status:empty{display:none}
+.uc-not{margin:12px 0 0;font-size:13px;color:var(--c-mut)}
+@media(min-width:960px){.uc-sticky{position:sticky;top:110px}}
+@media(max-width:959px){.uc-sticky{order:-1}}
+.uc-juridik .brodsmula{color:var(--c-mut)}
+.uc-juridik h1{font-size:calc(clamp(34px,4vw,56px) * var(--skala-r));margin-bottom:12px}
+.uc-juridik h2{font-size:24px;margin:36px 0 10px}
+.uc-juridik p{max-width:44em}
 </style></head>
 <body data-hero="band" data-header="ljus" data-meny="inline" data-ruta="vanster" data-kort="overlay" data-knapp="fylld" data-projekt="rutnat" data-nyheter="lista" data-sidhero="bild" data-motiv="inget" data-herotext="delad" data-rubrik="standard" data-kursiv="0">
 <div class="demo-rad" role="note">Förslag från Elevate Studio – inte föreningens officiella webbplats</div><a class="skip" href="#main">Hoppa till innehållet</a>
-<div class="topprad"><div class="wrap"><a href="index.html"><svg class="ik" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3z"/></svg><span>Uppsala Crew IF</span></a><a class="t-dold" href="bolag.html">Platser</a></div></div><header class="head" id="head">
+<div class="topprad"><div class="wrap"><a href="tel:+46735795636">073-579 56 36</a><a class="t-dold" href="mailto:info@uppsalacrew.se">info@uppsalacrew.se</a><a href="https://www.instagram.com/uppsalacrew/" rel="noopener">Instagram</a></div></div><header class="head" id="head">
   <div class="wrap">
     <a class="logga" href="index.html" aria-label="Uppsala Crew IF, till startsidan"><img class="logo-bild" src="img/logo.png" width="52" height="52" alt=""><span class="ord">Uppsala Crew</span><span class="tag">Skate, snow, freeski</span></a>
-    <nav class="nav" aria-label="Huvudmeny"><a href="verksamhet.html">Sporter</a><a href="bolag.html">Platser</a><a href="hallbarhet.html">Vårt ansvar</a><a href="karriar.html">Engagera dig</a><a href="om-oss.html">Om oss</a></nav>
+    <nav class="nav" aria-label="Huvudmeny"><a href="verksamhet.html">Sporter</a><a href="bolag.html">Platser</a><a href="hallbarhet.html">Vårt ansvar</a><a href="karriar.html">Engagera dig</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <div class="head-verktyg">
-      <a class="knapp knapp-primar head-kontakt" href="om-oss.html#kontakt">Kontakta oss</a>
+      <a class="knapp knapp-primar head-kontakt" href="bli-medlem.html">Bli medlem</a>
       
       <button class="meny-knapp" id="menyKnapp" type="button" aria-expanded="false" aria-controls="meny" aria-label="Öppna menyn"><span class="ord">Meny</span><span class="streck"><i></i><i></i><i></i></span></button>
     </div>
   </div>
   <nav class="meny" id="meny" aria-label="Meny" hidden>
     <div class="wrap">
-      <ul class="meny-huvud"><li><a href="verksamhet.html">Sporter</a></li><li><a href="bolag.html">Platser</a></li><li><a href="projekt.html">Aktiviteter</a></li><li><a href="hallbarhet.html">Vårt ansvar</a></li><li><a href="karriar.html">Engagera dig</a></li><li><a href="om-oss.html">Om oss</a></li></ul>
+      <ul class="meny-huvud"><li><a href="verksamhet.html">Sporter</a></li><li><a href="bolag.html">Platser</a></li><li><a href="projekt.html">Aktiviteter</a></li><li><a href="hallbarhet.html">Vårt ansvar</a></li><li><a href="karriar.html">Engagera dig</a></li><li><a href="om-oss.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="bli-medlem.html">Bli medlem</a></li></ul>
       <div><h4>Platser</h4><ul><li><a href="bolag.html#bolag-0">Sunnerstabacken</a></li><li><a href="bolag.html#bolag-1">Allis Uppsala</a></li><li><a href="bolag.html#bolag-2">KAP-rampen</a></li></ul></div>
-      <div><h4>Genvägar</h4><ul><li><a href="karriar.html#jobb">Engagera dig</a></li><li><a href="om-oss.html#kontakt">Kontakta oss</a></li></ul></div>
+      <div><h4>Genvägar</h4><ul><li><a href="bli-medlem.html">Bli medlem</a></li><li><a href="karriar.html#jobb">Engagera dig</a></li><li><a href="kontakt.html">Kontakta oss</a></li></ul></div>
     </div>
   </nav>
 </header>
@@ -66,7 +137,7 @@
       <div class="fot-om"><p class="fot-namn"><img src="img/logo.png" width="64" height="64" alt="Uppsala Crew IF logotyp" loading="lazy">Uppsala Crew IF</p><p>Uppsala Crew är den ideella föreningen för skateboard, snowboard och freeski i Uppsala. För dig som åker för skojs skull och för dig som vill tävla på elitnivå.</p><a class="textlank" href="verksamhet.html"><span>Läs om våra sporter</span><svg class="pil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       <div><h4>Kontakta oss</h4><ul><li>Uppsala Crew IF</li><li><a href="tel:0735795636">073-579 56 36</a></li><li><a href="mailto:info@uppsalacrew.se">info@uppsalacrew.se</a></li></ul></div>
       <div><h4>Postadress</h4><ul><li>Glimmervägen 6D</li><li>752 41 Uppsala</li><li>Org.nr 802540-8660</li></ul></div>
-      <div><h4>Genvägar</h4><ul><li><a href="om-oss.html">Om föreningen</a></li><li><a href="karriar.html">Engagera dig</a></li></ul></div>
+      <div><h4>Genvägar</h4><ul><li><a href="bli-medlem.html">Bli medlem</a></li><li><a href="om-oss.html">Om föreningen</a></li><li><a href="karriar.html">Engagera dig</a></li></ul></div>
     </div>
     
     <div class="fot-slut"><span class="fot-tag">Skate, snow, freeski</span><nav aria-label="Juridiskt"><a href="integritetspolicy.html">Integritetspolicy</a></nav><span>© <span data-year>2026</span> Uppsala Crew IF</span></div>
@@ -76,5 +147,6 @@
 <div class="elevate-credit"><a href="https://elevatestudio.nu" target="_blank" rel="noopener"><svg viewBox="0 0 1884.3 1353.9" aria-hidden="true"><path d="M0.0 1353.9 L1218.7 0.0 L1218.7 329.1 L479.7 1136.4 L786.7 1132.4 L1215.5 687.4 L1884.3 1349.9 L1590.1 1349.9 L1218.6 994.7 L865.4 1349.9Z" fill="currentColor"/></svg>Byggd av Elevate Studio</a></div>
 </footer>
 <script src="assets/sajt.js?v=88ffd835" defer></script>
+<script src="assets/form.js" defer></script>
 </body>
 </html>
