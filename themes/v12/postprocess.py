@@ -52,8 +52,9 @@ def fix(s, name):
     s = s.replace('href="#">Integritets', 'href="integritetspolicy.html">Integritets')
     s = s.replace('<span class="ord">Uppsala Crew</span>', '<img class="logo-bild" src="img/logo.png" width="52" height="52" alt=""><span class="ord">Uppsala Crew</span>')
     s = s.replace('<p class="fot-namn">Uppsala Crew</p>', '<p class="fot-namn"><img src="img/logo.png" width="64" height="64" alt="Uppsala Crew IF logotyp" loading="lazy">Uppsala Crew IF</p>')
-    s = re.sub(r'(<h1>[^<]*</h1>)<a class="textlank" href="verksamhet.html">(?:(?!</a>).)*?</a>',
-               lambda m: m.group(1) + '<p class="ingress hero-ingress">' + html.escape(C["intro"]["lead"]) + '</p><div class="knappar hero-knappar"><a class="knapp knapp-primar" href="om-oss.html#kontakt">Bli medlem</a><a class="knapp knapp-ljus" href="verksamhet.html">Våra sporter</a></div>', s, count=1, flags=re.S)
+    s = s.replace("<h1>Vi bygger Uppsalas skate- och snowscen</h1>", "<h1>Vi bygger Uppsalas <br>skate- och snowscen</h1>")
+    s = re.sub(r'(<h1>(?:[^<]|<br>)*</h1>)<a class="textlank" href="verksamhet.html">(?:(?!</a>).)*?</a>',
+               lambda m: m.group(1) + '<p class="ingress hero-ingress">Ideell förening för skateboard, snowboard och freeski i Uppsala sedan 2022.</p><div class="knappar hero-knappar"><a class="knapp knapp-primar" href="om-oss.html#kontakt">Bli medlem</a><a class="knapp knapp-ljus" href="verksamhet.html">Våra sporter</a></div>', s, count=1, flags=re.S)
     for a, b in TEXT:
         s = s.replace(a, b)
     s = s.replace('href="#"', 'href="om-oss.html#kontakt"' if name == "karriar.html" else 'href="projekt.html"' if name == "projekt.html" else 'href="om-oss.html"')
@@ -66,9 +67,12 @@ EXTRA = """<style>
 @media(max-width:700px){.logga .logo-bild{width:42px;height:42px}}
 .fot-namn{display:flex;align-items:center;gap:14px}
 .fot-namn img{width:64px;height:64px;border-radius:50%;background:#fff}
-.hero-band .slide-text{top:auto!important;bottom:clamp(56px,9vh,110px)!important;left:clamp(24px,5vw,80px)!important;right:auto!important;max-width:min(560px,calc(100% - 48px))!important}
+.hero-band .slide-text{top:auto!important;bottom:clamp(56px,9vh,110px)!important;left:clamp(24px,5vw,80px)!important;right:auto!important;max-width:min(860px,calc(100% - 48px))!important}
+.hero-band .slide-text{display:block!important;text-align:left!important}
+.hero-band .slide-text>*{margin-left:0!important;margin-right:0!important}
+@media(max-width:700px){.hero-band .slide-text h1 br{display:none}.hero-band .slide-text .hero-knappar .knapp{padding-inline:20px}}
 .hero-band .slide-text .hero-knappar .knapp{width:auto!important;flex:0 0 auto!important;padding-inline:28px}
-@media(min-width:701px){.hero-band .slide-text h1{font-size:clamp(34px,3.6vw,56px)!important}}
+@media(min-width:701px){.hero-band .slide-text h1{font-size:clamp(40px,4.4vw,68px)!important;max-width:none!important;line-height:1.02!important}}
 .hero-band .slide-text h1,.hero-band .slide-text h2{font-size:clamp(34px,4.2vw,64px)!important;line-height:1.04}
 .hero-band .slide-text .hero-ingress{color:rgba(255,255,255,.88);font-size:clamp(16px,1.25vw,19px);line-height:1.55;margin:22px 0 0!important;max-width:52ch}
 .hero-band .slide-text .hero-knappar{display:flex!important;flex-wrap:wrap;gap:12px;margin-top:26px;justify-content:flex-start!important;width:100%}
