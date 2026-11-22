@@ -78,7 +78,7 @@ body.menu-open{overflow:hidden}
 .toc .toc__n{grid-row:span 2;padding-top:.5em}
 .toc__t{font:400 1.9rem/1.05 var(--serif)}
 .toc__d{font-size:.95rem;color:var(--ink2)}
-@media (min-width:1000px){.issue{padding:120px 0}.issue__grid{grid-template-columns:1fr 1.6fr;gap:64px}.toc{grid-template-columns:repeat(3,1fr);gap:32px}}
+@media (min-width:1000px){.issue{padding:120px 0}.issue__grid{gap:48px}.toc{grid-template-columns:repeat(3,1fr);gap:32px}}
 
 /* essä / spalter */
 .essay,.sec{padding:72px 0}
