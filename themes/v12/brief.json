@@ -1,0 +1,274 @@
+{
+ "namn": "Uppsala Crew IF",
+ "kortnamn": "Uppsala Crew",
+ "slug": "uppsalacrew",
+ "typ": "Idrottsförening",
+ "tagline": "Skate, snow, freeski",
+ "slogan": "Skateboard, snowboard och freeski i Uppsala",
+ "hero_rubrik": "Vi bygger Uppsalas skate- och snowscen",
+ "hero_text": "Uppsala Crew är den ideella föreningen för skateboard, snowboard och freeski i Uppsala. För dig som åker för skojs skull och för dig som vill tävla på elitnivå.",
+ "intro_rubrik": "En förening, tre sporter, hela Uppsala",
+ "om": [
+  "Uppsala Crew Idrottsförening startade 2022. Vi arbetar för bättre förutsättningar att åka skateboard, snowboard och freeski i Uppsala, på Allis, KAP-rampen, Kapellgärdet och i Sunnerstabacken.",
+  "Föreningen drivs ideellt av styrelse och ledare. Medlemmar är försäkrade genom Sveriges Skateboardförbund och Svenska Skidförbundet på föreningens aktiviteter."
+ ],
+ "vagval_rubrik": "Vad vill du göra?",
+ "tjanster": [
+  {
+   "titel": "Skateboard",
+   "ikon": "upp",
+   "href": "verksamhet.html#omr-0"
+  },
+  {
+   "titel": "Snowboard",
+   "ikon": "skog",
+   "href": "verksamhet.html#omr-1"
+  },
+  {
+   "titel": "Freeski",
+   "ikon": "vind",
+   "href": "verksamhet.html#omr-2"
+  },
+  {
+   "titel": "Skateskola",
+   "ikon": "skola",
+   "href": "verksamhet.html#omr-3"
+  },
+  {
+   "titel": "Tävlingar",
+   "ikon": "megafon",
+   "href": "projekt.html"
+  },
+  {
+   "titel": "Platser",
+   "ikon": "karta",
+   "href": "bolag.html"
+  },
+  {
+   "titel": "Bli medlem",
+   "ikon": "nyckel",
+   "href": "om-oss.html#kontakt"
+  },
+  {
+   "titel": "Engagera dig",
+   "ikon": "folk",
+   "href": "karriar.html"
+  }
+ ],
+ "affarsomraden": [
+  {
+   "titel": "Skateboard",
+   "text": "Skateskola, tävlingar och åkning för alla från fem år till pensionsålder.",
+   "text2": "Sedan Tokyo 2021 är skateboard en olympisk gren. Vi vill sätta Uppsala på Sveriges skatekarta.",
+   "tagg": "skate-luft-inne"
+  },
+  {
+   "titel": "Snowboard",
+   "text": "Parkåkning och coachning i hemmabacken Sunnersta.",
+   "text2": "Parkåkning kräver lite snö och få hinder, så det går att träna länge under säsongen.",
+   "tagg": "snowboard-hopp"
+  },
+  {
+   "titel": "Freeski",
+   "text": "Hopp, rails och coachning i funparken. Vi vill få fler tjejer att åka freeski.",
+   "text2": "Freeski blev olympisk gren 2014 och är den yngsta grenen i parken.",
+   "tagg": "freeski-hopp"
+  },
+  {
+   "titel": "Skateskola",
+   "text": "Måndagar 18.00–19.00 på KAP-rampen, inomhus på Allis när det blir kallt.",
+   "text2": "Ta med bräda och hjälm. Inställda pass meddelas på Instagram.",
+   "tagg": "skateskola-grupp"
+  }
+ ],
+ "bolag": [
+  {
+   "namn": "Sunnerstabacken",
+   "segment": "Vinter",
+   "rubrik": "Funpark med hopp och rails",
+   "text": "Här håller vi till på vintern. Utrustning att låna och coachning av våra instruktörer.",
+   "tagg": "kvallshopp"
+  },
+  {
+   "namn": "Allis Uppsala",
+   "segment": "Inomhus",
+   "rubrik": "Skatehall med bowl och street",
+   "text": "Hit flyttar skateskolan när det blir för kallt ute.",
+   "tagg": "allis-hall-1"
+  },
+  {
+   "namn": "KAP-rampen",
+   "segment": "Utomhus",
+   "rubrik": "Miniramp vid Kapellgärdet",
+   "text": "Skateskolans hemmaplan och platsen för Miniramp Madness. Ulleråkersvägen 22.",
+   "tagg": "allis-bowl"
+  }
+ ],
+ "berattelser": [
+  {
+   "rubrik": "Fler tjejer i parken",
+   "text": "Egen tjejklass på våra tävlingar och en trygg plats att börja.",
+   "tagg": "tjejer-skate"
+  },
+  {
+   "rubrik": "Instruktörer i backen",
+   "text": "Låna utrustning och få coachning av föreningens instruktörer i Sunnersta.",
+   "tagg": "instruktorer"
+  },
+  {
+   "rubrik": "Uppsala Crew på väggen",
+   "text": "Graffitikonstnären Gijs Weijer målade Uppsala Crew 2024.",
+   "tagg": "graffiti"
+  }
+ ],
+ "nyckeltal": [
+  {
+   "varde": "2022",
+   "enhet": "",
+   "etikett": "Året föreningen grundades"
+  },
+  {
+   "varde": "3",
+   "enhet": "",
+   "etikett": "Sporter: skate, snowboard, freeski"
+  },
+  {
+   "varde": "4",
+   "enhet": "",
+   "etikett": "Platser i Uppsala"
+  },
+  {
+   "varde": "50–100",
+   "enhet": "kr",
+   "etikett": "Medlemsavgift per år"
+  }
+ ],
+ "projekt": [
+  {
+   "namn": "Miniramp Madness",
+   "ort": "KAP-rampen",
+   "typ": "Tävling skateboard",
+   "ar": "Skate",
+   "text": "Klasser för tjejer, juniorer och seniorer, prispengar, best trick och skejtloppis.",
+   "tagg": "skate-luft-inne"
+  },
+  {
+   "namn": "Uppsala Rail Jam",
+   "ort": "Sunnerstabacken",
+   "typ": "Tävling snowboard och freeski",
+   "ar": "Snow",
+   "text": "Först åker vi och peppar varandra, sedan tävlar den som vill. Alla har chans till priser.",
+   "tagg": "snowboard-box"
+  },
+  {
+   "namn": "Skateskolan",
+   "ort": "KAP-rampen och Allis",
+   "typ": "Träning",
+   "ar": "Skate",
+   "text": "Ledarledd skateträning för barn och unga, 18.00–19.00.",
+   "tagg": "skateskola-grupp"
+  },
+  {
+   "namn": "Coachning i funparken",
+   "ort": "Sunnerstabacken",
+   "typ": "Snowboard och freeski",
+   "ar": "Snow",
+   "text": "Instruktörer och utrustning att låna för den som vill börja eller utvecklas.",
+   "tagg": "freeski-hopp"
+  },
+  {
+   "namn": "Tjejsatsningen",
+   "ort": "Uppsala",
+   "typ": "Satsning",
+   "ar": "Alla",
+   "text": "Fler tjejer som skejtar och åker park, särskilt inom freeski.",
+   "tagg": "tjejer-skate"
+  },
+  {
+   "namn": "Inomhusåkning",
+   "ort": "Allis Uppsala",
+   "typ": "Skateboard",
+   "ar": "Skate",
+   "text": "Skatehall med bowl, ramper och street när det är kallt ute.",
+   "tagg": "allis-hall-2"
+  }
+ ],
+ "hallbarhet": {
+  "rubrik": "Idrott för alla, oavsett plånbok",
+  "text": "Skateboard och parkåkning kräver lite pengar och passar många som inte trivs i traditionella lagsporter. Barn och vuxna åker tillsammans, på samma villkor.",
+  "mal": [
+   [
+    "50–100 kr",
+    "medlemsavgift per år, du väljer själv"
+   ],
+   [
+    "Från 5 år",
+    "barn och vuxna på samma ramp"
+   ],
+   [
+    "Egen klass",
+    "för tjejer, med prispengar på våra tävlingar"
+   ]
+  ]
+ },
+ "investerare": {
+  "aktie": "",
+  "lista": "Ideell förening",
+  "kurs": "",
+  "forandring": "",
+  "rapporter": [],
+  "kalender": []
+ },
+ "karriar": {
+  "rubrik": "Bli en del av föreningen",
+  "text": "Uppsala Crew drivs helt ideellt. Det finns många sätt att hjälpa till, från en timme på en tävling till att bli instruktör.",
+  "jobb": [
+   [
+    "Instruktör skateskola",
+    "KAP-rampen och Allis"
+   ],
+   [
+    "Instruktör funpark",
+    "Sunnerstabacken"
+   ],
+   [
+    "Funktionär på tävling",
+    "Uppsala"
+   ],
+   [
+    "Styrelse och arrangemang",
+    "Uppsala"
+   ]
+  ]
+ },
+ "nyheter": [],
+ "tidslinje_rubrik": "Föreningens historia",
+ "tidslinje_text": "Från start 2022 till i dag.",
+ "tidslinje": [
+  [
+   "2022",
+   "Uppsala Crew Idrottsförening bildas."
+  ],
+  [
+   "2023",
+   "Första Miniramp Madness på KAP-rampen."
+  ],
+  [
+   "2024",
+   "Freeskilandslaget besöker Sunnerstabacken. Gijs Weijer målar Uppsala Crew."
+  ],
+  [
+   "2025",
+   "Uppsala Rail Jam med Backyard Session Tour."
+  ]
+ ],
+ "kontakt": {
+  "adress": "Glimmervägen 6D",
+  "postnr": "752 41",
+  "ort": "Uppsala",
+  "telefon": "073-579 56 36",
+  "epost": "info@uppsalacrew.se",
+  "orgnr": "802540-8660"
+ },
+ "demo": "Förslag från Elevate Studio – inte föreningens officiella webbplats"
+}
