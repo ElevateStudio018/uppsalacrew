@@ -333,3 +333,5 @@ main>.marq:last-child{margin-top:clamp(56px,8vw,104px);margin-bottom:-6px}
 }
 .sec>.pageno{position:static;display:block;text-align:right;margin:0 0 -0.6em;font-size:clamp(3rem,8vw,6rem)}
 .grain{position:absolute;min-height:100%}
+.top__cta{display:none}
+@media (min-width:640px){.top__cta{display:inline-flex}}

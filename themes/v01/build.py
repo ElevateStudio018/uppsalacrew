@@ -8,6 +8,11 @@ from pathlib import Path
 V = "v01"
 ROOT = Path(__file__).resolve().parents[2]
 C = json.loads((ROOT / "content/content.json").read_text(encoding="utf-8"))
+# diy-spot-bilden visar en affisch med datum (årsmöte) – sajten ska inte ha datumsatta evenemang
+SKIP = {"diy-spot"}
+C["gallery"] = [g for g in C["gallery"] if g["image"] not in SKIP]
+for _s in C["sports"]:
+    _s["images"] = [i for i in _s["images"] if i not in SKIP]
 M = json.loads((ROOT / "docs/media/manifest.json").read_text(encoding="utf-8"))
 OUT = ROOT / "docs" / V
 P = f"/uppsalacrew/{V}/"
