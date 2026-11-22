@@ -1,0 +1,22 @@
+ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^page_id=8739$
+RewriteRule ^$ /om-foreningen/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^page_id=8733$
+RewriteRule ^$ /kontakt/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^page_id=8460$
+RewriteRule ^$ /evenemang/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^page_id=3938$
+RewriteRule ^$ /bli-medlem/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^event-item=uppsala-rail-jam
+RewriteRule ^$ /evenemang/uppsala-rail-jam-2025/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^event-item=miniramp-madness
+RewriteRule ^$ /evenemang/miniramp-madness-2024/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^event-item=freeskilandslaget
+RewriteRule ^$ /evenemang/freeskilandslaget-i-sunnerstabacken-2024/? [R=301,L]
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
