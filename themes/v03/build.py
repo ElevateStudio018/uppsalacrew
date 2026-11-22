@@ -17,6 +17,11 @@ ORG = C["org"]
 PAGES = {p["slug"]: p for p in C["pages"]}
 SPORTS = {s["slug"]: s for s in C["sports"]}
 PLACES = {p["slug"]: p for p in C["places"]}
+# diy-spot visar en datumsatt affisch (årsmöte) – utesluts enligt briefen
+SKIP = {"diy-spot"}
+for _s in C["sports"]:
+    _s["images"] = [i for i in _s["images"] if i not in SKIP]
+C["gallery"] = [g for g in C["gallery"] if g["image"] not in SKIP]
 
 
 def e(s):
@@ -256,8 +261,9 @@ def build_home():
 <span class="srow__m">{e(s['when'])} · {e(s['where'])}</span>
 <span class="srow__img zoom">{img(s['hero'], "(min-width: 900px) 40vw, 100vw")}</span>
 </a></li>""" for i, s in enumerate(C["sports"], 1))
-    facts = "".join(f'<li><span class="num">{e(f["value"])}</span><span class="num__l">{e(f["label"])}</span></li>'
-                    for f in C["facts"] if f["label"] in ("Grundad", "Medlemsavgift"))
+    pr = C["membership"]["price"].split(" kr")[0]
+    facts = (f'<li><span class="num">{e(ORG["founded"])}</span><span class="num__l">Grundad</span></li>'
+             f'<li><span class="num">{e(pr)}</span><span class="num__l">Kronor per år i medlemsavgift</span></li>')
     places = "".join(f"""<li><a href="{url('platser/' + p['slug'])}"><span class="pl__t">{e(p['title'])}</span>
 <span class="pl__s">{e(p['short'])}</span><span class="pl__go" aria-hidden="true">→</span></a></li>""" for p in C["places"])
     comps = "".join(f"""<article class="comp"><div class="comp__img zoom">{img(c['image'], "(min-width: 900px) 50vw, 100vw")}</div>
@@ -286,7 +292,7 @@ def build_home():
 <p class="lead rv">{e(C['competitions']['lead'])}</p></div>
 <div class="comps">{comps}</div>
 <p class="rv"><a class="link" href="{url('tavlingar')}">Om tävlingarna <span aria-hidden="true">→</span></a></p></section>
-<section class="split2 wrap"><div class="split2__img zoom">{img(C['girls']['image'], "(min-width: 900px) 50vw, 100vw")}</div>
+<section class="split2 wrap"><div class="split2__img zoom">{img("instruktorer", "(min-width: 900px) 50vw, 100vw")}</div>
 <div><p class="kicker">{e(C['girls']['title'])}</p>{split("Fler tjejer i parken")}<p class="lead rv">{e(C['girls']['lead'])}</p>
 <p class="rv"><a class="link" href="{url('tjejer')}">Läs om satsningen <span aria-hidden="true">→</span></a></p></div></section>
 <section class="sec"><div class="wrap sec__head"><p class="kicker">Galleri</p>{split("Kvällar i backen, dagar i hallen")}</div>
