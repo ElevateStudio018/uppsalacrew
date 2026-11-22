@@ -7,6 +7,10 @@ V = "v07"
 ROOT = Path(__file__).resolve().parents[2]
 C = json.loads((ROOT / "content/content.json").read_text(encoding="utf-8"))
 M = json.loads((ROOT / "docs/media/manifest.json").read_text(encoding="utf-8"))
+# diy-spot innehåller en daterad affisch (årsmöte) och visas därför inte
+for _s in C["sports"]:
+    _s["images"] = [x for x in _s["images"] if x != "diy-spot"]
+C["gallery"] = [g for g in C["gallery"] if g["image"] != "diy-spot"]
 OUT = ROOT / "docs" / V
 B = f"/uppsalacrew/{V}"
 MEDIA = "/uppsalacrew/media"

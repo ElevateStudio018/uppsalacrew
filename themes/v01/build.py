@@ -111,11 +111,11 @@ def page(slug, title, desc, body, ld=None, og=None, preload=None):
         nav_html = f'<nav class="crumbs wrap" aria-label="Brödsmulor"><ol>{li}<li aria-current="page">{e(tr[-1][1])}</li></ol></nav>'
     full = f"{title} – {ORG['name']}" if slug else f"{ORG['name']} – {title}"
     canon = f"{SITE}/{slug + '/' if slug and slug != '404' else ''}"
-    og_img = f"{SITE}/media/{og or 'snowboard-hopp'}-960.webp"
+    og_img = f"{SITE}/media/{og or 'snowboard-hopp'}-{[w for w in M[og or 'snowboard-hopp']['widths'] if w <= 960][-1]}.webp"
     pre = ""
     if preload:
         m = M[preload]
-        pre = (f'<link rel="preload" as="image" href="{MED}{preload}-960.webp" imagesrcset="'
+        pre = (f'<link rel="preload" as="image" href="{MED}{preload}-{[w for w in m["widths"] if w <= 960][-1]}.webp" imagesrcset="'
                + ", ".join(f"{MED}{preload}-{w}.webp {w}w" for w in m["widths"]) + '" imagesizes="(min-width: 900px) 50vw, 100vw">')
     ldjson = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in lds)
     doc = f"""<!doctype html>
@@ -345,7 +345,7 @@ def build_place(p):
            "address": {"@type": "PostalAddress", "streetAddress": p["address"], "addressLocality": "Uppsala", "addressCountry": "SE"},
            "url": f"{SITE}/{sl}/"}]
     if p["image"]:
-        ld[0]["image"] = f"{SITE}/media/{p['image']}-960.webp"
+        ld[0]["image"] = f"{SITE}/media/{p['image']}-{[w for w in M[p['image']]['widths'] if w <= 960][-1]}.webp"
     page(sl, p["title"], f"{p['title']}: {p['short']} {p['address']}.", body, ld=ld, og=p["image"], preload=p["image"])
 
 

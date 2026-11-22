@@ -15,6 +15,11 @@ B = f"/uppsalacrew/{V}"
 MED = "/uppsalacrew/media"
 ORG = C["org"]
 PAGES = {p["slug"]: p for p in C["pages"]}
+# diy-spot-filen visar en datumsatt årsmötesaffisch, inte en DIY-spot: används inte
+SKIP = {"diy-spot"}
+C["gallery"] = [g for g in C["gallery"] if g["image"] not in SKIP]
+for _s in C["sports"]:
+    _s["images"] = [x for x in _s["images"] if x not in SKIP]
 
 
 def e(s):
@@ -164,7 +169,7 @@ def phero(kicker, h1, lead, image=None, label=None):
     pic = f'<div class="phero__img">{polaroid(image, None, 2, "(min-width: 900px) 40vw, 90vw").replace(" loading=\"lazy\" decoding=\"async\"", " fetchpriority=\"high\"")}</div>' if image else ""
     lab = f'<p class="marker">{e(label)}</p>' if label else ""
     return f"""<section class="phero{' phero--img' if image else ''}"><div class="wrap phero__grid"><div>
-<p class="kicker">{e(kicker)}</p><h1>{e(h1)}</h1>{f'<p class="lead">{e(lead)}</p>' if lead else ''}{lab}</div>{pic}</div></section>"""
+<p class="kicker">{e(kicker)}</p><h1>{e(h1)}</h1>{f'<p class="lead">{e(lead)}</p>' if lead else ''}{lab}</div>{pic}</div></section>{drip('ink', 'cream', 7)}"""
 
 
 def cta_band():
