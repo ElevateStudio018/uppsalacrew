@@ -11,12 +11,28 @@
 <link rel="stylesheet" href="assets/tokens.css?v=bcf1fad1">
 <link rel="stylesheet" href="assets/bas.css?v=f351c1c4">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<style>@media(max-width:700px){.hero-band .spel-kontroll{top:auto!important;bottom:9.5rem!important}}</style></head>
+<style>
+.logga{display:inline-flex;align-items:center;gap:12px}
+.logga .logo-bild{width:52px;height:52px;flex:none;border-radius:50%}
+@media(max-width:700px){.logga .logo-bild{width:42px;height:42px}}
+.fot-namn{display:flex;align-items:center;gap:14px}
+.fot-namn img{width:64px;height:64px;border-radius:50%;background:#fff}
+.hero-band .slide-text{top:auto!important;bottom:clamp(56px,9vh,110px)!important;left:clamp(24px,5vw,80px)!important;right:auto!important;max-width:min(560px,calc(100% - 48px))!important}
+.hero-band .slide-text .hero-knappar .knapp{width:auto!important;flex:0 0 auto!important;padding-inline:28px}
+@media(min-width:701px){.hero-band .slide-text h1{font-size:clamp(34px,3.6vw,56px)!important}}
+.hero-band .slide-text h1,.hero-band .slide-text h2{font-size:clamp(34px,4.2vw,64px)!important;line-height:1.04}
+.hero-band .slide-text .hero-ingress{color:rgba(255,255,255,.88);font-size:clamp(16px,1.25vw,19px);line-height:1.55;margin:22px 0 0!important;max-width:52ch}
+.hero-band .slide-text .hero-knappar{display:flex!important;flex-wrap:wrap;gap:12px;margin-top:26px;justify-content:flex-start!important;width:100%}
+.hero-band .slide-text .hero-knappar .knapp-ljus{background:#fff;color:#0c2b4b}
+.hero-band .bild-slide .bild-fyll::after{background:linear-gradient(0deg,rgba(6,18,32,.78),rgba(6,18,32,.15) 55%,rgba(6,18,32,.05))!important}
+.hero-band .spel-kontroll{top:auto!important;bottom:clamp(56px,9vh,110px)!important}
+@media(max-width:700px){.hero-band .spel-kontroll{top:96px!important;bottom:auto!important;right:24px!important}.hero-band .slide-text{bottom:40px!important}}
+</style></head>
 <body data-hero="band" data-header="ljus" data-meny="inline" data-ruta="vanster" data-kort="overlay" data-knapp="fylld" data-projekt="rutnat" data-nyheter="lista" data-sidhero="bild" data-motiv="inget" data-herotext="delad" data-rubrik="standard" data-kursiv="0">
 <div class="demo-rad" role="note">Förslag från Elevate Studio – inte föreningens officiella webbplats</div><a class="skip" href="#main">Hoppa till innehållet</a>
 <div class="topprad"><div class="wrap"><a href="index.html"><svg class="ik" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3z"/></svg><span>Uppsala Crew IF</span></a><a class="t-dold" href="bolag.html">Platser</a></div></div><header class="head" id="head">
   <div class="wrap">
-    <a class="logga" href="index.html" aria-label="Uppsala Crew IF, till startsidan"><span class="ord">Uppsala Crew</span><span class="tag">Skate, snow, freeski</span></a>
+    <a class="logga" href="index.html" aria-label="Uppsala Crew IF, till startsidan"><img class="logo-bild" src="img/logo.png" width="52" height="52" alt=""><span class="ord">Uppsala Crew</span><span class="tag">Skate, snow, freeski</span></a>
     <nav class="nav" aria-label="Huvudmeny"><a href="verksamhet.html">Sporter</a><a href="bolag.html" aria-current=page>Platser</a><a href="hallbarhet.html">Vårt ansvar</a><a href="karriar.html">Engagera dig</a><a href="om-oss.html">Om oss</a></nav>
     <div class="head-verktyg">
       <a class="knapp knapp-primar head-kontakt" href="om-oss.html#kontakt">Kontakta oss</a>
@@ -41,7 +57,7 @@
   <div class="wrap">
     
     <div class="fot-grid">
-      <div class="fot-om"><p class="fot-namn">Uppsala Crew</p><p>Uppsala Crew är den ideella föreningen för skateboard, snowboard och freeski i Uppsala. För dig som åker för skojs skull och för dig som vill tävla på elitnivå.</p><a class="textlank" href="verksamhet.html"><span>Läs om våra sporter</span><svg class="pil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="fot-om"><p class="fot-namn"><img src="img/logo.png" width="64" height="64" alt="Uppsala Crew IF logotyp" loading="lazy">Uppsala Crew IF</p><p>Uppsala Crew är den ideella föreningen för skateboard, snowboard och freeski i Uppsala. För dig som åker för skojs skull och för dig som vill tävla på elitnivå.</p><a class="textlank" href="verksamhet.html"><span>Läs om våra sporter</span><svg class="pil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       <div><h4>Kontakta oss</h4><ul><li>Uppsala Crew IF</li><li><a href="tel:0735795636">073-579 56 36</a></li><li><a href="mailto:info@uppsalacrew.se">info@uppsalacrew.se</a></li></ul></div>
       <div><h4>Postadress</h4><ul><li>Glimmervägen 6D</li><li>752 41 Uppsala</li><li>Org.nr 802540-8660</li></ul></div>
       <div><h4>Genvägar</h4><ul><li><a href="om-oss.html">Om föreningen</a></li><li><a href="karriar.html">Engagera dig</a></li></ul></div>
