@@ -1,0 +1,125 @@
+{
+ "snowboard-hopp": {
+  "w": 2560,
+  "h": 887,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "alt": "Snowboardåkare i luften över ett hopp i Sunnerstabacken en solig vinterdag"
+ },
+ "freeski-hopp": {
+  "w": 1686,
+  "h": 949,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "alt": "Freeskiåkare i luften över ett hopp i Sunnerstabacken"
+ },
+ "snowboard-box": {
+  "w": 1080,
+  "h": 608,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Snowboardåkare på en box i funparken i Sunnerstabacken"
+ },
+ "kvallshopp": {
+  "w": 978,
+  "h": 550,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Upplyst hopp i Sunnerstabacken en vinterkväll"
+ },
+ "allis-bowl": {
+  "w": 1280,
+  "h": 912,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Bowlen i skatehallen på Allis Uppsala"
+ },
+ "allis-hall-1": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "alt": "Skatehallen på Allis med ramper och rails"
+ },
+ "allis-hall-2": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "alt": "Översikt över skatehallen på Allis"
+ },
+ "instruktorer": {
+  "w": 1180,
+  "h": 1480,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Instruktörer i Uppsala Crew-jackor vid backen en vinterkväll"
+ },
+ "skateskola-grupp": {
+  "w": 1476,
+  "h": 681,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Barn och ledare från skateskolan samlade med brädor"
+ },
+ "skate-luft-inne": {
+  "w": 1200,
+  "h": 630,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Skateboardåkare i luften över en ramp inomhus"
+ },
+ "graffiti": {
+  "w": 1239,
+  "h": 873,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "Graffitimålning med texten Uppsala Crew i orange och svart"
+ },
+ "tjejer-skate": {
+  "w": 700,
+  "h": 252,
+  "widths": [
+   480
+  ],
+  "alt": "Två tjejer med hjälm som hjälper varandra att stå på skateboard"
+ },
+ "diy-spot": {
+  "w": 1468,
+  "h": 1464,
+  "widths": [
+   480,
+   960
+  ],
+  "alt": "DIY-spot för skateboard under en bro i Uppsala"
+ }
+}
